@@ -37,9 +37,6 @@
 
   footer div a {
     position: relative;
-  }
-
-  footer div a {
     text-decoration: none;
   }
 
@@ -108,7 +105,7 @@
       },
       malam: {
         body: '#212121',
-        text: '#eee'
+        text: '#fff'
       },
     }
     let now = ''
@@ -128,7 +125,9 @@
       document.body.style.background = theme[tmpNow].body
       document.querySelector('#app').style.color = theme[tmpNow].text
       document.querySelector('footer').style.color = theme[tmpNow].text
-      document.querySelector('.link').style.color = theme[tmpNow].text
+      document.querySelectorAll('.link').forEach(el => {
+        el.style.color = theme[tmpNow].text
+      })
       typed.strings = [word]
       document.title = word
       typed.reset(1)
@@ -163,7 +162,7 @@
       else if (jam >= 15 && jam < 19) {
         now = 'sore'
       }
-      else if (jam >= 19 && jam < 6) {
+      else if ((jam >= 19 && jam <= 24) || jam < 6) {
         now = 'malam'
       }
 
