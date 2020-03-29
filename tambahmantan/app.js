@@ -2,9 +2,6 @@ document.title = 'Mau gk jadi mantanku?'
 
 let waktuPutus = 5
 
-document.querySelector('#slide-2').style.display = 'none'
-document.querySelector('#slide-3').style.display = 'none'
-
 document.querySelector('.say-yes').addEventListener('click', ev => {
   document.querySelector('#slide-1').style.display = 'none'
   document.querySelector('#slide-2').style.display = 'block'
